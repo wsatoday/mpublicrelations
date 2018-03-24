@@ -1,0 +1,39 @@
+//fonts
+$font-body: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading: "Lato", "Times New Roman", Times, sans-serif;
+
+//colors
+$primary-light-color: rgba(255,255,255,1);
+$primary-dark-color: rgba(7,34,58,1);
+$secundary-color: rgba(216,180,122,1);
+
+//text sizes
+$mobile-title-font-size: 2.5rem;
+$mobile-subtitle-font-size: 1.5rem;
+$mobile-font-size:1.4rem;
+$mobile-link-font-size: 1rem;
+$desktop-title-font-size: 4rem;
+$desktop-subtitle-font-size: 2rem;
+$desktop-font-size: 1.6rem;
+$desktop-link-font-size: 1.2rem;
+
+$bg-gradient:linear-gradient(45deg, rgba(199,200,200,1) 0%,rgba(249,250,250,1) 100%);
+
+@mixin hover-transition($time) {
+  -webkit-transition: $time all ease-in-out;
+     -moz-transition: $time all ease-in-out;
+      -ms-transition: $time all ease-in-out;
+          transition: $time all ease-in-out;
+}
+
+@mixin responsive-images($image1x, $image2x) {
+	background-image: url($image1x);
+	background-image: -webkit-image-set(
+    	url($image1x) 1x,
+    	url($image2x) 2x
+    );
+    background-image: image-set(
+    	url($image1x) 1x,
+    	url($image2x) 2x
+    );
+}

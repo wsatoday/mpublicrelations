@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    #PROGRESS BAR
+\*------------------------------------*/
+.nprogress-custom-parent {
+	overflow: hidden;
+	position: fixed !important;
+	top: 0px;
+	width: 100%;
+	z-index: 1111;
+	height: 2px;
+}
+
+.nprogress-custom-parent #nprogress .bar {
+	height: 2px;
+	background: $secundary-color;
+}
+
+#nprogress .peg {
+	box-shadow: 0 0 10px $secundary-color, 0 0 5px $secundary-color !important;
+}
