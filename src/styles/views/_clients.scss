@@ -1,0 +1,110 @@
+/*------------------------------------*\
+    #Section-General
+\*------------------------------------*/
+.page--clients .section-margin-cover {
+	margin-right: 40px;
+}
+
+/*------------------------------------*\
+    #Section-1
+\*------------------------------------*/
+.page--clients .section-cover {
+	background-image: url("/client/images/MPR-44-small-1x.jpg");
+}
+
+.page--clients h1 {
+	text-transform: initial;
+	letter-spacing: 0.2rem;
+}
+
+.page--clients .subtitle {
+	text-transform: initial;
+	font-size: 1.5rem;
+	font-weight: 100;
+	letter-spacing: 0.2rem;
+	margin-bottom: 25px;
+}
+
+/*------------------------------------*\
+    #Section-2
+\*------------------------------------*/
+
+// LOGOS
+.container-section {
+	padding-top: 40px;
+	//margin: 40px;
+}
+
+.background-gray {
+	background-color: $lightgray;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.logos {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	padding: 0;
+}
+
+.logos img {
+	display: block;
+	float: left;
+	flex: 0 0 auto;
+	margin: 20px;
+	width: 60vw;
+	//max-width: 80vw;
+	height: 100%;
+	//height: 80px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+
+/*------------------------------------*\
+    #MQ
+\*------------------------------------*/
+
+
+@media screen and (min-width: 1024px) {	
+	.page--clients .section-cover {
+		background-image: url("/client/images/MPR-44-large-2x.jpg");
+	}
+	.logos img {
+		width: calc(100%/5);
+		height: calc(100%/5);
+	}
+	.page--clients .section-margin-cover {
+		margin-bottom: 50px;
+	}
+	.logos img {
+		padding: 40px;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	.page--clients .section-cover {
+		background-image: url("/client/images/MPR-44-large-1x.jpg");
+	}
+	.logos img {
+		width: calc(100%/3);
+		height: calc(100%/3);
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	.page--clients .section-cover {
+		background-image: url("/client/images/MPR-44-medium-1x.jpg");
+	}
+	.logos img {
+		width: calc(100%/2);
+		height: calc(100%/2);
+	}
+}

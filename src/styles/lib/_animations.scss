@@ -1,0 +1,21 @@
+.apparate {
+	opacity: 0;
+}
+
+@keyframes fadeInUp {
+	from {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+
+	to {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+.fade-in-up {
+	animation-name: fadeInUp;
+	animation-duration: .7s;
+	animation-fill-mode: forwards;
+}

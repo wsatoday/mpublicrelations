@@ -1,0 +1,343 @@
+/*------------------------------------*\
+    #Resets
+\*------------------------------------*/
+input:focus {outline:none;}
+textarea:focus, input:focus {outline: 0;}
+
+/*------------------------------------*\
+    #Section-General
+\*------------------------------------*/
+.contacts .logo-M {
+	fill: $red;
+}
+
+.contacts .menu-btn, .contacts .menu-btn::after, .contacts .menu-btn::before {
+    background: $red;
+}
+
+.contacts .menu-btn.active {
+	background: transparent;
+}
+
+.contacts .menu-btn.active::before {
+  background: white;
+}
+
+.contacts .menu-btn.active::after {
+  background: white;
+}
+
+.page--contacts {
+	background-color: $lightgray;
+	height: auto;
+
+}
+.main-content {
+  min-height: 100vh;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.m-background {
+	position: relative;
+	display: block;
+	min-height: 100vh;
+	margin: 0px;
+	padding-bottom: 25px;
+	height: auto;
+	overflow: hidden;
+	background-image: url("/client/images/m-background.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:  left top;
+}
+
+.contactos-wrap {	
+	display: block;
+}
+
+/*------------------------------------*\
+    #Section-1
+\*------------------------------------*/
+.address {
+	margin-top: 100px;
+	margin-left: 15px;
+}
+
+.page--contacts .subtitle {
+	text-transform: initial;
+	font-size: 2rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+	margin-bottom: 25px;
+	padding-bottom: 0px;
+	text-shadow: none;
+}
+
+.contactos-text {
+	font-size: 1.5rem;
+	font-weight: 300;
+	line-height: 1.8;
+}
+
+.page--contacts .title {
+	color: $red;
+	text-transform: none;
+	margin-bottom: 30px;
+	position: absolute;
+	top: 400px;
+	text-shadow: none;
+}
+
+.padding-bottom {
+	padding-bottom: 80px;
+}
+
+/*------------------------------------*\
+    #Form
+\*------------------------------------*/
+.left {
+    display:flex;
+    flex-direction:column;
+}
+
+.right {
+    display:flex;
+    flex-direction:column;
+}
+
+.form-contact {
+	margin-top: 30vh;
+}
+
+.form-txt {
+	font-size: 1.3rem;
+	font-weight: 300;
+	border-radius: 0;
+}
+
+.form {
+	display: table;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.form-group-row {
+	display: table-row;
+	width: 100%;
+}
+
+.form-column {
+	width: 100%;
+	padding-right: 0px;
+	float: left;
+	display:table-cell;
+	box-sizing: border-box;
+}
+
+.page--contacts input {
+	font-size: 1.6rem;
+	color: $blue;
+}
+
+.form-item {
+	border-radius: 0;
+	border-color: $blue;
+	border-width: 0 0 1px 0;
+	border-style: none none solid none;
+	background: transparent;
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+	width: 100%;
+}
+
+.form-row {
+	width: 100%;
+	padding-right: 0px;
+	float: left;
+	display:table-cell;
+	box-sizing: border-box;
+}
+
+.form-message {
+	font-size: 1.6rem;
+	border-radius: 0;
+	border-color: $blue;
+	border-width: 0 0 1px 0;
+	border-style: none none solid none;
+	box-shadow: none;
+	background: transparent;
+	padding-bottom: 10px;
+	margin-top: 30px;
+	color: $blue;
+	padding-right: 0px;
+	width: 100%;
+}
+
+.form-item:focus {
+	border-color: inherit;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	outline-color: transparent;
+	outline-style: none;
+}
+
+label { 
+	font-weight: 300;
+	font-size: 1.3rem;
+	line-height: 2;
+	color: $blue;
+	font-weight: 300;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: transparent;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: transparent;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: transparent;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color: transparent;
+}
+textarea::-webkit-input-placeholder { /* WebKit browsers */
+    color: transparent;
+}
+textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: transparent;
+}
+textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: transparent;
+}
+textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color: transparent;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+	font-weight: 300;
+	background-color: $blue;
+	background-image: none;
+	color: $blue;
+}
+
+.button-align {
+	text-align: center;
+}
+
+.button--submit {
+	//border-left: 0px;
+	//border-right: 0px;
+}
+
+.page--contacts .section-margin-cover {
+    z-index: 0; 
+    bottom: auto; 
+}
+
+/*------------------------------------*\
+    #MQ
+\*------------------------------------*/
+@media screen and (min-width: 64.063rem) {	
+	.page--contacts .section-margin {
+	    margin-left: 10vw;
+	}
+
+	.address {
+		margin-top: 45vh;
+		margin-left: 15vw;
+	}
+
+	.contactos-wrap {	
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+	}
+
+	.page--contacts .title {
+		position: absolute;
+    	top: 25vh;
+    	left: 0;
+	}
+
+	.form-contact {
+		width: 40vw;
+	}
+
+	.page--contacts .subtitle {
+		font-size: 2.6rem;
+	}	
+
+	.contactos-text {
+		font-size: 1.5rem;
+		line-height: 2;
+	}
+
+	.page--contacts h2 {
+		margin-top: 0;
+	}
+
+	.form-contact {
+		margin-top: 45vh;
+	}
+
+	.form {
+		display: table;
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	.form-group-row {
+		display: table-row;
+		width: 100%;
+	}
+
+	.form-column {
+		width: 50%;
+		padding-right: 20px;
+		float: left;
+		display:table-cell;
+		box-sizing: border-box;
+	}
+
+	.form-row {
+		width: 100%;
+		padding-right: 40px;
+		float: left;
+		display:table-cell;
+		box-sizing: border-box;
+	}
+
+	.form-message {
+		font-size: 1.6rem;
+		border-radius: 0;
+		border-color: $blue;
+		border-width: 0 0 1px 0;
+		border-style: none none solid none;
+		box-shadow: none;
+		background: transparent;
+		padding-bottom: 10px;
+		margin-top: 30px;
+		color: $blue;
+		padding-right: 20px;
+		width: 100%;
+	}
+
+	label {
+		cursor: pointer;
+	}
+
+	.form-control {
+		font-size: 1.3rem;
+	}
+
+	.page--contacts button {
+		margin: 20px 0;
+		cursor: pointer;
+	}
+
+	.button-align {
+		text-align: left;
+	}
+}

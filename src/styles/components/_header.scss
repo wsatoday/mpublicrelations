@@ -1,0 +1,321 @@
+/*------------------------------------*\
+    #Header
+\*------------------------------------*/
+header {
+	background-color: transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 4;
+	width: 100%;
+}
+
+.logo-home {
+	width: auto;
+	height: auto;
+	display: inline-block;
+	position: fixed;
+	z-index: 4;
+}
+
+.logo-M {
+	margin: 15px;
+	height: 55px;
+	width: auto;
+	fill: rgba(255,255,255,1);
+	transition: fill .3s ease-in-out;
+}
+
+
+.main-header.is--red .logo-M {
+	fill: $red;
+}
+
+.logo-M.is--active, 
+.main-header.is--red  .logo-M.is--active {
+	fill: rgba(255,255,255,1); 
+}
+
+//changes
+.menu-btn-wrap {
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	top: 25px;
+	right: 15px;
+	z-index: 4;
+}
+.menu-btn {
+	margin-top: 18px;
+	margin-left: 5px;
+}
+
+.menu-btn, .menu-btn::before, .menu-btn::after {
+	background: white;
+	content: '';
+	display: block;
+	height: 4px;
+	width: 30px;
+	border-radius: 2px;
+	transition: all .3s ease-in-out;
+}
+
+.menu-btn::before {
+	transform: translateY(-10px);
+}
+
+.menu-btn::after {
+	transform: translateY(6px);
+}
+
+.menu-btn.active {
+  background: transparent;
+}
+
+.menu-btn.active::before {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+.menu-btn.active::after {
+  transform: translateY(-4px) translateX(0rem) rotate(45deg);
+}
+
+.main-header.is--red .menu-btn, 
+.main-header.is--red .menu-btn::after, 
+.main-header.is--red .menu-btn::before {
+    background: $red;
+}
+
+.main-header.is--red .menu-btn.active {
+	background: transparent;
+}
+
+.main-header.is--red .menu-btn.active::before {
+  background: white;
+}
+
+.main-header.is--red .menu-btn.active::after {
+  background: white;
+}
+
+.menu{
+	position: fixed;
+	top: 0px;
+	background-color: $red;
+	-webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+	transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+	width: 100vw;
+	height: 100vh;
+	z-index: 3;
+	display:flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+}
+
+.nav {
+  position: relative;
+  //top: 50%;
+  //left: 50%;
+  //transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.menu.is--hidden {
+	top: -150%;
+}
+
+.menu.is--visible {
+	top: 0px;
+	width: 100%;
+}
+
+.menu-item {
+	font-size: 2.2rem;
+	color: white;
+	font-weight: 200;
+	line-height: 2;
+	position: relative;
+	letter-spacing: 0.1rem;
+	cursor: pointer;
+}
+
+.display-menu-items {
+	display: block;
+}
+
+.menu-item::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  border-radius: 2px;
+  width: 0%;
+  margin-bottom: -6px;
+  background-color: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-item:focus::after,
+.menu-item:active::after,
+.menu-item.is--active::after,
+.menu-item.router-link-active::after {
+	width: 100%;
+}
+
+/* ----------- Social Icons ----------- */
+.social-icons {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.social-icon, .social-icon svg {
+  color: $blue;
+  font-size: 2.5rem;;
+}
+
+.social-icon img {
+	height: 22px;
+	width: auto;
+}
+
+.social-icon {
+	text-decoration: none;
+  	display: inline;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+	opacity: 0.9;
+}
+
+ul .social-icons {
+  margin-top: 10px;
+}
+
+.social-icons li {
+  vertical-align: top;
+  display: inline-block;
+  height: auto;
+}
+
+.social-icons li:first-child {
+	margin-right: 20px;
+}
+
+.fa-facebook-f, .fa-linkedin-in {
+  padding: 15px;
+  transition: .5s;
+  fill: $blue;
+}
+
+
+
+/* ----------- Language ----------- */
+.language {
+	color: white;
+	text-align: left;
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 3;
+}
+
+.language-item {
+	font-size: 1.4rem;
+	color: white;
+	font-weight: 400;
+	letter-spacing: 0.2rem;
+	position: relative;
+	margin-right: 20px;
+	z-index: 1;
+}
+
+ul.language {
+    margin-top: 10px;
+    z-index: 999999999999999;
+}
+
+.language li {
+    vertical-align: top;
+    display: inline;
+    float: left;
+}
+
+.language li:last-child .language-item {
+	margin-right: 0px;
+}
+
+.language-item.is--active {
+	color: $blue;
+}
+
+@media screen and (min-width: 1024px) {
+	header {
+		width: 100%;
+	}
+	.logo-M {
+		margin: 30px;
+		height: 80px;
+	}
+
+	.menu-item {
+		font-size: 2.5rem;
+		cursor: pointer;
+	}
+
+	.menu-item:hover::after {
+		width: 100%;
+		-webkit-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.menu-btn-wrap {
+		cursor: pointer;
+	}
+
+	.nav {
+		width: 100%;
+		//position: absolute;
+		//top: 50vh;
+		//left: 50%;
+		//-webkit-transform: translateX(-50%);
+		//transform: translateX(-50%);
+		text-align: center;
+		margin: 0 auto;
+		align-items: center;
+	}
+
+	.display-menu-items {
+		display: inline;
+		float: left;
+		margin: 0 1vw;
+	}	
+
+	.social-icons {
+		    margin-top: 2rem;
+	}
+
+	.social-icons a {
+		cursor: pointer;
+	}
+
+	/* ----------- Language ----------- */
+	.language-item {
+		transition: all 0.3s ease-in-out
+	}
+
+	.language-item:hover {
+		color: $blue;
+		cursor: pointer;
+	}
+}	

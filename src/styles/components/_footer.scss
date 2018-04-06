@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    #Footer
+\*------------------------------------*/
+footer {
+	position: relative;
+	display: block;
+	padding-top:15px;
+	padding-bottom: 5px;
+	height: auto;
+	width: 100%;
+	background-color: $gray;
+	margin-bottom: 0px;
+
+	p {
+		font-size: 1.2rem;
+		font-weight: 400;
+		text-align: center;
+		color: $blue;
+	}
+}

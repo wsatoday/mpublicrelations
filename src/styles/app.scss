@@ -5,10 +5,16 @@
 @import '/lib/base';
 
 //components
-@import '/components/progress-bar';
+@import '/components/loader';
+//@import '/components/progress-bar';
 @import '/components/header';
 @import '/components/footer';
 
 //views
 @import '/views/home';
-
+@import '/views/services';
+@import '/views/clients';
+@import '/views/about';
+@import '/views/team';
+@import '/views/contacts';
+@import '/lib/animations';

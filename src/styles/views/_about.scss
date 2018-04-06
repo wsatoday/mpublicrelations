@@ -1,0 +1,235 @@
+
+/*------------------------------------*\
+    #Section-1
+\*------------------------------------*/
+.page--about .section-cover {
+	background-image: url("/client/images/MPR-52-small-1x.jpg");
+}
+
+.page--about h1 {
+	text-transform: initial;
+	letter-spacing: 0.2rem;
+}
+
+.page--about .subtitle {
+	text-transform: initial;
+	font-size: 1.5rem;
+}
+
+/*------------------------------------*\
+    #Section-2
+\*------------------------------------*/
+.sobre-wrap {
+	padding: 30px 0px;
+}
+
+.m-container {
+	padding: 0;
+	background:transparent url("/client/images/m-simbolo.png") no-repeat center center;
+	width: 100%;
+	height: 200px;
+	background-size: contain;
+	margin-bottom: 30px;
+
+}
+.text--1 {
+	font-size: 1.7rem;
+	font-weight: 300;
+	text-align: left;
+	line-height: 1.8;
+	letter-spacing: 0.05rem;
+}
+
+.m-container p {
+	float: left;
+	margin: 15px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	align-items: center;
+
+	/* Internet Explorer 10 */
+	display:-ms-flexbox;
+	-ms-flex-pack:center;
+	-ms-flex-align:center;
+
+	/* Firefox */
+	display:-moz-box;
+	-moz-box-pack:center;
+	-moz-box-align:center;
+
+	/* Safari, Opera, and Chrome */
+	display:-webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center; 
+}
+
+/*------------------------------------*\
+    #Section-3
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    #Section-4
+\*------------------------------------*/
+
+.section-sobre {
+	background: url("/client/images/MPR-63-small-1x.jpg") no-repeat center center;
+	width: 100%;
+	height: 60vh;
+	background-size:cover;
+	z-index: -10;
+	color: white;
+	display: block;
+	position: relative;
+}
+
+.text-2 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	text-align: left;
+	line-height: 1.6;
+	margin: 30px 15px 30px 15px;
+}
+
+.padding-top {
+	padding: 30px 0px;
+}
+
+.red-box {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	align-content: flex-start;
+	background-color: $red;
+	opacity: 1;
+	width: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 50%;
+	mix-blend-mode: multiply;
+	padding: 30px;
+	box-sizing: border-box;
+}
+
+.text-3 {
+	max-width: 480px;
+	padding-right: 15px;
+    padding-left: 15px;
+	box-sizing: border-box;
+	z-index: 10;
+	color: white;
+	position: absolute;
+}
+
+/*------------------------------------*\
+    #MQ
+\*------------------------------------*/
+@media screen and (min-width: 481px) {
+	.page--about .section-cover {
+		background-image: url("/client/images/MPR-52-large-2x.jpg");
+	}
+
+	.section-sobre {
+		background: url("/client/images/MPR-63-large-2x.jpg") no-repeat center center;
+	}
+	.text-3 {
+		font-size: 1.8rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {	
+	.page--about .section-cover {
+		background-image: url("/client/images/MPR-52-large-2x.jpg");
+	}
+
+	.page--about .section-margin-cover {
+		margin-bottom: 50px;
+	}
+
+	.page--about .subtitle {
+		font-size: 1.6rem;
+		font-weight: 100;
+	}
+
+	.sobre-wrap {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+		align-items: center;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	.m-container {
+		padding: 0;
+		background:transparent url("/client/images/m-simbolo.png") no-repeat center center;
+		width: 50%;
+		height: 200px;
+		background-size: contain;
+		margin-bottom: 0px;
+	}
+
+	.section--sobre {
+	    width: 50%; 
+	}
+
+	.sobre-margin-left {
+		margin: 80px 30px;
+	}
+
+	.sobre-margin-right {
+		margin: 80px 30px;
+	}
+
+	.text-2 {
+		font-size: 1.5rem;
+		font-weight: 300;
+		text-align: left;
+		line-height: 1.6;
+    	letter-spacing: 0.1rem;
+	}
+
+	.text-2-margin-bottom {
+		margin-bottom: 60px;
+	}
+
+	.text-3 {
+		font-size: 1.7rem;
+		font-weight: 300;
+		text-align: left;
+		line-height: 1.7;
+    	letter-spacing: 0.05rem;
+    	color: white;
+    	z-index: 10;
+	}
+
+	.red-box {
+		align-items: flex-end;
+		align-content: flex-end;
+		width: 50%;
+		height: 100%;
+	}
+
+	.section-sobre {
+		background: url("/client/images/MPR-63-large-2x.jpg") no-repeat center center;
+		width: 100%;
+		background-size:cover;
+		z-index: -10;
+		color: white;
+		display: block;
+		position: relative;
+		margin-top: 0px;
+		height: 400px;
+	}
+
+	.position-absolute-red {
+		position: absolute;
+		left: 55%;
+		top: 50%;
+		transform: translateY(-60%);
+	}
+}
